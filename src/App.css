@@ -1,1 +1,23 @@
+.input {
+  background-color: #212121;
+  max-width: 190px;
+  height: 20px;
+  padding: 10px;
+  /* text-align: center; */
+  border: 2px solid white;
+  border-radius: 5px;
+  /* box-shadow: 3px 3px 2px rgb(249, 255, 85); */
+}
 
+.input:focus {
+  color: rgb(229, 9, 20);
+  background-color: #212121;
+  outline-color: rgb(229, 9, 20);
+  box-shadow: -3px -3px 15px rgb(229, 9, 20);
+  transition: .1s;
+  transition-property: box-shadow;
+}
+
+.nav{
+  padding-top: 20px;
+}

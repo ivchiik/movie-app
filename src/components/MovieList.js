@@ -1,13 +1,13 @@
 import React from 'react'
-
+import { StyledMovie } from './styles/List.styled'
 
 const MovieList = (props) => {
   return (
     <>
           {props.movies.map((movie, index) => (
-              <div>
+              <StyledMovie>
               <img src={movie.Poster} alt="movie" />
-          </div>
+          </StyledMovie>
       ))}
     </>
   )
