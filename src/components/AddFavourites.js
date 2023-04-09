@@ -6,8 +6,9 @@ const AddFavourites = () => {
     <>
       <span
         style={{
-          fontSize: "15px",
+          fontSize: "14px",
           color: "#fff",
+          marginRight: "2px",
         }}
       >
         Add To Favourites

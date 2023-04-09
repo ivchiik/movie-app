@@ -6,6 +6,8 @@ import { ThemeProvider } from "styled-components";
 import { StyledList } from "./components/styles/List.styled";
 import Header from "./components/Header";
 import AddFavourites from "./components/AddFavourites";
+import FavouritesHeading from "./components/FavouritesHeading";
+import RemoveFavourites from "./components/RemoveFavourites";
 
 function App() {
   const theme = {
@@ -16,6 +18,7 @@ function App() {
   };
 
   const [movies, setMovies] = useState([]);
+  const [favourites, setFavourites] = useState([]);
   const [searchValue, setSearchValue] = useState("");
 
   const getMovieRequest = async (searchValue) => {
@@ -33,13 +36,35 @@ function App() {
     getMovieRequest(searchValue);
   }, [searchValue]);
 
+  const addFavouriteMovie = (movie) => {
+    const newFavourites = [ ...favourites, movie ];
+    setFavourites(newFavourites);
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <Header value={searchValue} setSearchValue={setSearchValue} />
+        <Header
+          header="Movies"
+          value={searchValue}
+          setSearchValue={setSearchValue}
+        />
         <StyledList>
-          <MovieList movies={movies} AddFavourites={AddFavourites} />
+          <MovieList
+            movies={movies}
+            handleFavouritesClick={addFavouriteMovie}
+            AddFavourites={AddFavourites}
+          />
+        </StyledList>
+
+        <FavouritesHeading header="Favourites" />
+        <StyledList>
+          <MovieList
+            movies={favourites}
+            handlefavouritesclick={addFavouriteMovie}
+            AddFavourites={RemoveFavourites}
+          />
         </StyledList>
       </>
     </ThemeProvider>

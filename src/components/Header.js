@@ -4,7 +4,7 @@ import { StyledHeader } from "./styles/Header.styled";
 const Header = (props) => {
   return (
     <StyledHeader>
-      <h1 style={{ color: "#fff" }}>Movies</h1>
+          <h1 style={{ color: "#fff" }}>{props.header}</h1>
       <div className="nav">
         <input
           placeholder="Type To Search..."
