@@ -5,6 +5,7 @@ import { GlobalStyles } from "./components/styles/Global";
 import { ThemeProvider } from "styled-components";
 import { StyledList } from "./components/styles/List.styled";
 import Header from "./components/Header";
+import AddFavourites from "./components/AddFavourites";
 
 function App() {
   const theme = {
@@ -38,7 +39,7 @@ function App() {
         <GlobalStyles />
         <Header value={searchValue} setSearchValue={setSearchValue} />
         <StyledList>
-          <MovieList movies={movies} />
+          <MovieList movies={movies} AddFavourites={AddFavourites} />
         </StyledList>
       </>
     </ThemeProvider>
