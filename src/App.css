@@ -14,10 +14,39 @@
   background-color: #212121;
   outline-color: rgb(229, 9, 20);
   box-shadow: -3px -3px 15px rgb(229, 9, 20);
-  transition: .1s;
+  transition: 0.1s;
   transition-property: box-shadow;
 }
 
-.nav{
+.nav {
   padding-top: 20px;
+}
+
+.list{
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.list:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.list:hover .overlay{
+  opacity: 1;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background:rgb(0, 0, 0,0.8);
+  width: 80%;
+  transition: 0.5s ease;
+  opacity: 0;
+  bottom: 0;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
 }

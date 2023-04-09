@@ -11,8 +11,9 @@ const Header = (props) => {
           class="input"
           name="text"
           type="text"
-            value={props.value}
-            onChange={(event) => props.setSearchValue(event.target.value)}      
+          style={{ color: "#fff" }}
+          value={props.value}
+          onChange={(event) => props.setSearchValue(event.target.value)}
         />
       </div>
     </StyledHeader>

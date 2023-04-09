@@ -4,14 +4,14 @@ export const StyledList = styled.div`
   display: flex;
   flex-direction: row;
   overflow-x: auto;
-  flex-wrap: scroll;
+  flex-wrap: nowrap;
 `;
 
 export const StyledMovie = styled.div`
-    display: flexbox;
-    margin: 10px;
+  margin: 8px;
 
-    img{
-        width: 200px;
-    }
-`
+  img {
+    width: 200px;
+    height: 100%;
+  }
+`;
