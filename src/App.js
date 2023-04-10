@@ -67,7 +67,7 @@ function App() {
       <>
         <GlobalStyles />
         <Header
-          header="Films"
+          header="Movies"
           value={searchValue}
           setSearchValue={setSearchValue}
         />
